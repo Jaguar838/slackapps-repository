@@ -1,0 +1,28 @@
+{
+  "name": "slackapps-repository",
+  "version": "1.0.0",
+  "description": "A basic template to spin up a Bolt app for Slack.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaguar838/slackapps-repository.git"
+  },
+  "keywords": [
+    "node.js",
+    "express",
+    "app Slack"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jaguar838/slackapps-repository/issues"
+  },
+  "homepage": "https://github.com/Jaguar838/slackapps-repository#readme",
+  "dependencies": {
+    "@slack/bolt": "^3.7.0",
+    "dotenv": "^10.0.0"
+  }
+}
