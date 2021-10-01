@@ -1,17 +1,16 @@
-const { App } = require("@slack/bolt");
+const { App, LogLevel } = require("@slack/bolt");
 const { config } = require("dotenv");
-const LogLevel = require("loglevel");
 
 config();
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
   signingSecret: process.env.SLACK_SIGNING_SECRET,
   // LogLevel can be imported and used to make debugging simpler
-  logLevel: LogLevel.debug,
+  logLevel: LogLevel.DEBUG,
 });
 
-// Reverse all messages the app can hear
-app.message(async ({ message, say }) => {
+// Reverse all messages the app can hear/Перевернуть все сообщения!
+app.message("Reverse", async ({ message, say }) => {
   const reversedText = [...message.text].reverse().join("");
   await say(reversedText);
 });
